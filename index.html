@@ -17,19 +17,19 @@
         </p>
         <div id="form-div">
             <form id="survey-form">
-                <label for="name">Name <br>
-                    <input type="text" name="name" id="name" placeholder="enter your name"> <br>
+                <label for="name" id="name-label">Name <br>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required> <br>
                 </label>
-                <label for="email">Email <br>
-                    <input type="email" name="email" id="email" placeholder="enter your email"><br>
+                <label for="email" id="email-label">Email <br>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required><br>
                 </label>
-                <label for="age"> Age <br>
+                <label for="number" id="number-label"> Age (optional) <br>
                     <input type="number" name="number" id="number"
-                    placeholder="Age" min="10" step=""> <br>
+                    placeholder="Age" min="10" max="99" step=""> <br>
                 </label>
                 <label for="role"> Select your current role <br>
-                    <select name="role" id="role">
-                        <option value="default" disabled selected>Select current role</option>
+                    <select id="dropdown" required>
+                        <option value="" disabled selected>Select current role</option>
                         <option value="student">Student</option>
                         <option value="job">Full Time Job</option>
                         <option value="learner">Full Time Learner</option>
@@ -38,20 +38,20 @@
                     </select> <br>
                 </label>
                 <label> Would you recomment freeCodeCamp to a friend? <br>
-                    <input type="radio" id="choice1" name="recommend">
+                    <input type="radio" id="choice1" name="recommend" value="definitely" checked>
                     <label for="choice1">Definitely</label> <br>
-                    <input type="radio" id="choice2" name="recommend">
+                    <input type="radio" id="choice2" name="recommend" value="maybe">
                     <label for="choice2">Maybe</label> <br>
-                    <input type="radio" id="choice3" name="recommend">
+                    <input type="radio" id="choice3" name="recommend" value="nut sure">
                     <label for="choice3">Not sure</label> <br>
                 </label>
                 <label for="feature"> Select your current role <br>
-                    <select name="feature" id="feature">
-                        <option value="default" disabled selected>Select an option</option>
-                        <option value="student">Challenges</option>
-                        <option value="job">Projects</option>
-                        <option value="learner">Community</option>
-                        <option value="nothing">Open Source</option>
+                    <select name="feature" id="feature" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="challenges">Challenges</option>
+                        <option value="projects">Projects</option>
+                        <option value="community">Community</option>
+                        <option value="open source">Open Source</option>
                     </select> <br>
                 </label>
                 <label>
@@ -79,9 +79,9 @@
                     <input type="checkbox" name="checkbox" value="courses" id="courses">
                     <label for="courses">Additional Courses</label> <br>
                     <label for="comment"> Any comments or suggestions? <br>
-                        <input type="text" placeholder="Enter your comment here..." id="comment">
+                        <textarea id="comment" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
                     </label> <br>
-                    <input type="button" name="submit" id="submit" value="Submit">
+                    <button type="submit" form="survey-form" value="Submit">Submit</button>
                 </label>
             </form>
         </div>
