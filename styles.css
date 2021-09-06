@@ -33,6 +33,22 @@ body{
     max-width: 100%;
     margin: 0 auto;
 }
+#title{
+    font-size: 40px;
+}
+@media (max-width: 500px){
+    #title{
+        font-size: 30px;
+    }
+}
+@media (max-width: 390px){
+    #title{
+        font-size: 25px;
+    }
+    #description{
+        font-size: 15px;
+    }
+}
 #description{
     margin-top: -20px;
 }
@@ -52,21 +68,47 @@ body{
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    outline: 1px solid white;
     padding: 0px 10px;
 }
 label{
     font-size: 21px;
+    width: 100%;
 }
 #name-label, #email-label, #number-label, #role-label,  #recommend-label, #option-label, #improve-label, #comment-label{
     margin-top: 20px;
 }
-#name{
+#name, #email, #number, #dropdown, #feature{
     margin-top: 5px;
     font-size: 18px;
-    width: 80%;
+    width: 100%;
     border-radius: 3px;
     border: none;
+    outline: none;
+    color: rgb(37, 37, 37);
+    padding: 8px;
+}
+#name:focus, #email:focus, #number:focus, #dropdown:focus, #feature:focus{
+    outline: 2px solid cornflowerblue;
+}
+select, input[type="text"], input[type="email"], input[type="number"]{
+      width:100%;
+      box-sizing:border-box;
+    }
+input[type="radio"], input[type="checkbox"]{
+    transform: scale(1.5);
+}
+option{
+    color: rgb(37, 37, 37);
+}
+#comment{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: rgb(37, 37, 37);
+    font-size: 18px;
+    border: none;
+    padding: 10px;
 }
 #submit-button{
     background-color: rgb(0, 230, 77);
